@@ -38,6 +38,7 @@
 			<th class="center">Alamat</th>
 			<th class="center">No HP</th>
 			<th class="center">Total</th>
+			<th class="center">Action</th>
 			<!-- <th class="center">View</th> -->
 	</tr>
 	</thead>

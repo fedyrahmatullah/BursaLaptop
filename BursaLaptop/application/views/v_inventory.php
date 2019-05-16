@@ -1,5 +1,5 @@
 <?php 
-if($this->session->userdata('level')=='owner' || $this->session->userdata('level')=='developer') {
+if($this->session->userdata('level')=='owner' || $this->session->userdata('level')=='admin') {
 	?>
 <!--DATA INVENTORY-->
 <table id="dynatable" class="table table-striped table-bordered table-hover">
@@ -76,7 +76,10 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
         	</tr>
 		</tbody>
 	</table>
-	<?php } else { ?>
+	<?php } 
+	
+	//tampilan admin
+	else { ?>
 
 	<table id="dynatable1" class="table table-striped table-bordered table-hover">
 	<thead>

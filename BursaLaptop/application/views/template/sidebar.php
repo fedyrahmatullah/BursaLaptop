@@ -309,6 +309,59 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 		<b class="arrow"></b>
 	</li>
 
+	<li class="<?php 
+	if($sidebar=='Pelanggan') {
+	if(isset($menu)) { 
+	echo $menu; } else {
+	echo "";
+	}
+	}	
+	?>">
+		<a href="<?php echo base_url();?>pelanggan">
+			<i class="menu-icon fa fa-users"></i>
+			<span class="menu-text">Pelanggan</span>
+		</a>
+		<b class="arrow"></b>
+	</li>
+
+
+	<li class="<?php 
+	if($sidebar=='Kategori') {
+	if(isset($menu)) { 
+	echo $menu; } else {
+	echo "";
+	}
+	}	
+	?>">
+		<a href="#" class="dropdown-toggle">
+			<i class="menu-icon fa fa-database"></i>
+			<span class="menu-text"> Tambah Kategori </span>
+
+			<b class="arrow fa fa-angle-down"></b>
+		</a>
+
+		<b class="arrow"></b>
+
+		<ul class="submenu">
+			<li class="">
+				<a href="<?php echo base_url();?>kategori">
+					<i class="menu-icon fa fa-database"></i>
+					Kategori Barang
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+			<li class="">
+				<a href="<?php echo base_url();?>kategori/sub_kat">
+					<i class="menu-icon fa fa-database"></i>
+					Jenis Barang
+				</a>
+
+				<b class="arrow"></b>
+			</li>
+		</ul>
+	</li>
+	
 	<li class="
 	<?php 
 	if($sidebar=='Inventory') {
@@ -320,7 +373,7 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	?>">
 		<a href="<?php echo base_url();?>inventory">
 			<i class="menu-icon fa fa-cubes"></i>
-			<span class="menu-text">Inventory Barang</span>
+			<span class="menu-text">Daftar Barang</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -350,7 +403,7 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	?>">
 		<a href="<?php echo base_url();?>pembelian">
 			<i class="menu-icon fa fa-cube"></i>
-			<span class="menu-text">Pembelian</span>
+			<span class="menu-text">Pesanan Service</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -369,6 +422,7 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 		</a>
 		<b class="arrow"></b>
 	</li>
+
 </ul><!-- /.nav-list -->
 
 <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

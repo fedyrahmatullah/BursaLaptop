@@ -3,7 +3,7 @@
 				<tr>
 					<th class="center" width="5%">No</th>
 					<th class="center">Kategori</th>
-					<th class="center">Sub Kategori</th>
+					<th class="center">Jenis Barang</th>
 					<th class="center" width="20%">Actions</th>
 				</tr>
 			</thead>
@@ -31,7 +31,7 @@
 				<tr>
 					<th class="center" width="5%">No</th>
 					<th class="center">Kategori</th>
-					<th class="center">Sub Kategori</th>
+					<th class="center">Jenis Barang</th>
 					<th class="center" width="20%">Actions</th>
 				</tr>
 			</thead>

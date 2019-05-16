@@ -9,10 +9,6 @@ class Pelanggan extends CI_Controller {
 	}
 
 	public function index() {
-		if($this->session->userdata('level')=='admin') {
-		$data = array('content' => "Maaf Tidak bisa masuk ke akses ini" );
-		$this->load->view('notification/warning',$data);
-	} else {
 		if($this->session->has_userdata('username')) {
 		$data = array(
 		'sidebar'	=> "Pelanggan",
@@ -25,7 +21,6 @@ class Pelanggan extends CI_Controller {
 		$this->load->view('template/footer');
 	} else {
 		$this->load->view('login');
-	}
 	}
 }
 	

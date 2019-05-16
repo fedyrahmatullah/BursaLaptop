@@ -1,7 +1,7 @@
 <div class="page-content">
 	<div class="page-header">
 		<h1>
-		Pembelian Barang
+		<b>Pesanan Service<b>
 		</h1>
 	</div><!-- /.page-header -->
 
@@ -14,13 +14,117 @@
 <div id="cr-brg_beli" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
 <div class="modal-dialog modal-lg">
 	<div class="modal-content">
-		<div class="modal-header">
+		<div style ="text-align: center" class="modal-header">
 			<a href="<?php echo base_url();?>pembelian" class="close">&times;</a>
-		Cari Barang
+		<h3>Pesan Service<h3>
 		</div>
+		<form class="form-horizontal" method="post" role="form" action="#">
 		<div class="modal-body">
-			<div class="table-responsive">
-				<div id="v_beli"></div>
+		
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="col-sm-4 control-label no-padding-right" for="form-field-1-1"> Nama Pelanggan </label>
+					<div class="col-sm-8">
+						<input type="text" class="col-xs-10 col-sm-11" name="nama_pelanggan" id="nama_pelanggan" required="true" />
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">	
+				<div class="form-group">
+					<label class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Alamat </label>
+					<div class="col-sm-9">
+						<input type="text" class="col-xs-10 col-sm-11" name="alamat" id="alamat" required="true" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> No HP </label>
+				<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-4" name="no_hp" id="no_hp" required="true" />
+				</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Merk Laptop</label>
+				<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-4" name="merk" id="merk" required="true" />
+				</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Type Laptop </label>
+				<div class="col-sm-9">
+					<input type="text" class="col-xs-10 col-sm-4" name="merk" id="merk" required="true" />
+				</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Kerusakan </label>
+				<div class="col-sm-9">
+					<textarea type="text" class="col-xs-10 col-sm-5" name="merk" id="merk" required="true" ></textarea>
+				</div>
+		</div>
+
+		<h5>Kelengkapan dan kondisi :<h5>
+
+		<div class="form-group">
+			<label style="margin-right:10px" class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Layar </label>
+				<div class="col-sm-2">
+				<div class ="clear-fix"></div>
+					<input type="radio" name="layar" value="Baik" > Baik
+  					<input  style="margin-left:10px" type="radio" name="layar" value="Rusak"> Rusak
+				</div>
+		</div>
+
+		<div class="form-group">
+			<label style="margin-right:10px" class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Keyboard </label>
+				<div class="col-sm-2">
+				<div class ="clear-fix"></div>
+					<input type="radio" name="keyboard" value="Baik" > Baik
+  					<input  style="margin-left:10px"type="radio" name="keyboard" value="Rusak"> Rusak
+				</div>
+		</div>
+
+		<div class="form-group">
+			<label style="margin-right:10px" class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Hardisk </label>
+				<div class="col-sm-2">
+				<div class ="clear-fix"></div>
+					<input type="radio" name="hardisk" value="Baik" > Baik
+  					<input  style="margin-left:10px"type="radio" name="hardisk" value="Rusak"> Rusak
+				</div>
+		</div>
+
+		<div class="form-group">
+			<label style="margin-right:10px" class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> OS </label>
+				<div class="col-sm-2">
+				<div class ="clear-fix"></div>
+					<input type="radio" name="os" value="Baik" > Baik
+  					<input  style="margin-left:10px"type="radio" name="os" value="Rusak"> Rusak
+				</div>
+		</div>
+		
+		<div class="form-group">
+			<label style="margin-right:10px" class="col-sm-2 control-label no-padding-right" for="form-field-1-1"> Speaker </label>
+				<div class="col-sm-2">
+				<div class ="clear-fix"></div>
+					<input type="radio" name="speaker" value="Baik" > Baik
+  					<input  style="margin-left:10px"type="radio" name="speaker" value="Rusak"> Rusak
+				</div>
+		</div>
+
+		</div>
+		<div class="modal-footer">
+		<button type="button" class="btn btn-success" id="savecust"><i class="fa fa-save"></i> Simpan</button>
+		<button type="reset" class="btn btn-danger"><i class="fa fa-close"></i> Reset</button>
+		</div>
+		<input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+</form>
+
+	
+	
 		</div>
 		</div>
 	</div>

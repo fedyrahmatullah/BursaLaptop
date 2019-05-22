@@ -6,6 +6,7 @@ class M_admin extends CI_Model {
 		$this->db->from('tbl_admin');
 		$this->db->where('level','admin');
 		$this->db->or_where('level','owner');
+		$this->db->or_where('level','service');
 		return $this->db->get();
 	}
 

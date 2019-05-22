@@ -27,11 +27,11 @@ if($this->session->has_userdata('username')) {
             <div class="login-container">
             <div class="center">
                 <h1>
-                  <i class="ace-icon fa fa-car green"></i>
-                  <span class="red">Aplikasi</span>
-                  <span class="white" id="id-text2">Bengkel</span>
+                  <i class="ace-icon fa fa-laptop green"></i>
+                  <span class="red">BURSA</span>
+                  <span class="white" id="id-text2">LAPTOP</span>
                 </h1>
-                <h4 class="blue" id="id-company-text">&copy; dr. AKI</h4>
+                <h4 class="blue" id="id-company-text">&copy; TIF POLIJE 2K17</h4>
               </div>
             <br>
               <div class="space-6"></div>
@@ -41,8 +41,8 @@ if($this->session->has_userdata('username')) {
                   <div class="widget-body">
                     <div class="widget-main">
                       <h4 class="header blue lighter bigger">
-                        <i class="ace-icon fa fa-coffee green"></i>
-                        Please Enter Your Information
+                        <i class="ace-icon fa fa-user  green"></i>
+                        Masukkan Informasi Anda
                       </h4>
 
                       <div class="space-6"></div>
@@ -50,14 +50,14 @@ if($this->session->has_userdata('username')) {
                       <form method="post" action="<?php echo base_url();?>main/login">
                         <fieldset>
                           <label class="block clearfix">
-                            <span class="block input-icon input-icon-right">
+                            <span class="block input-icon input-icon-left">
                               <input type="text" class="form-control" placeholder="Username" name="username" autocomplete="off" />
                               <i class="ace-icon fa fa-user"></i>
                             </span>
                           </label>
 
                           <label class="block clearfix">
-                            <span class="block input-icon input-icon-right">
+                            <span class="block input-icon input-icon-left">
                               <input type="password" class="form-control" placeholder="Password" name="password" autocomplete="off" />
                               <i class="ace-icon fa fa-lock"></i>
                             </span>

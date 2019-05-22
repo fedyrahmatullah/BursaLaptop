@@ -13,7 +13,7 @@ class Inventory extends CI_Controller {
 		$data = array(
 		'barang'	=> $this->M_inventory->tampil()->result(),
 		'kategori'	=> $this->M_inventory->tampil_kategori()->result(),
-		'sidebar' 	=> "Inventory",
+		'sidebar' 	=> "Daftar Barang",
 		'menu'		=> "active",
 		);
 			$this->load->view('template/header');
@@ -36,29 +36,21 @@ class Inventory extends CI_Controller {
 	}
 
 
-	public function add_data_ajax() { 
-		$nama  		 = $this->input->post('nama',TRUE);
-		$kat 		 = $this->input->post('kat',TRUE);
-		$sub_1 		 = $this->input->post('sub_1',TRUE);
-		$sub_2 		 = $this->input->post('sub_2',TRUE);
-		$sub_3 		 = $this->input->post('sub_3',TRUE);
-		$harga_beli  = $this->input->post('harga_b',TRUE);
-		$harga_jual  = $this->input->post('harga_j',TRUE);
-		$stok  		 = $this->input->post('stok',TRUE);
-		
+	function simpan_barang() {
 		$data = array(
-		'nama' 		 => $nama,
-		'kategori' 	 => $kat,
-		'sub_1'		 => $sub_1,
-		'sub_2'		 => $sub_2,
-		'sub_3'		 => $sub_3,
-		'harga_beli' => $harga_beli, 	
-		'harga_jual' => $harga_jual,
-		'stok' 		 => $stok
-		);
-		$this->M_inventory->tambah($data,'tbl_barang');
+			'nama' 	 => $this->input->post('nama',TRUE),
+			'kategori' => $this->input->post('kategori',TRUE),
+			'jenis'  => $this->input->post('jenis',TRUE),
+			'harga_beli' => $this->input->post('harga_beli',TRUE),
+			'harga_jual' => $this->input->post('harga_jual',TRUE),
+			'stok' => $this->input->post('stok',TRUE)
+			);
+			$this->M_inventory->tambah_barang($data,'tbl_barang');
+			$this->load->view('notification/success');
+			echo "<meta http-equiv='refresh' content='2;url=index'>";
+        
+    }
 
-	}
 
 	public function edit($id) {
 		$where 	= array('id' => $id );
@@ -68,9 +60,7 @@ class Inventory extends CI_Controller {
 			'sidebar' 	=> "Inventory",
 			'menu'		=> "active",
 			'get_kat' 	=>  $this->M_inventory->x_kat($arr_brg['kategori'])->result(),
-			'get_sub_1' 	=>  $this->M_inventory->x_sub_1($arr_brg['sub_1'])->result(),
-			'get_sub_2' 	=>  $this->M_inventory->x_sub_2($arr_brg['sub_2'])->result(),
-			'get_sub_3' 	=>  $this->M_inventory->x_sub_3($arr_brg['sub_3'])->result()
+			'get_jenis' 	=>  $this->M_inventory->x_jenis($arr_brg['jenis'])->result()
 		);
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$data);
@@ -121,15 +111,13 @@ class Inventory extends CI_Controller {
 
         foreach ($list as $barang) {
             $no++;
-            $button = "<a class='btn btn-primary' href='inventory/edit/$barang->id'><i class='fa fa-pencil'></i> Edit</a>
+            $button = "<a class='btn btn-primary' href='inventory/edit/$barang->id'><i class='fa fa-pencil'></i> Detail & Edit</a>
 		<button class='btn btn-danger' onClick='delinv($barang->id)'><i class='fa fa-trash'></i> Delete</button>";
             $row = array();
             $row[] = $no;
             $row[] = $barang->nama;
             $row[] = $barang->kategori;
-            $row[] = $barang->sub_1;
-            $row[] = $barang->sub_2;
-            $row[] = $barang->sub_3;
+            $row[] = $barang->jenis;
             $row[] = $barang->harga_beli;
             $row[] = $barang->harga_jual;
             $row[] = $barang->stok;
@@ -155,14 +143,12 @@ class Inventory extends CI_Controller {
         foreach ($list as $barang) {
             $no++;
             $button = "<a class='btn btn-primary' href='inventory/edit/$barang->id'><i class='fa fa-pencil'></i> Edit</a>
-		<button class='btn btn-danger' onClick='delinv($barang->id)'><i class='fa fa-trash'></i> Delete</button>";
+		<button class='btn btn-danger' onClick='delinv($barang->id)'><i class='fa fa-trash'></i>Delete</button>";
             $row = array();
             $row[] = $no;
             $row[] = $barang->nama;
             $row[] = $barang->kategori;
-            $row[] = $barang->sub_1;
-            $row[] = $barang->sub_2;
-            $row[] = $barang->sub_3;
+            $row[] = $barang->Jenis;
             $row[] = $barang->harga_jual;
             $row[] = $barang->stok;
             $row[] = $button;

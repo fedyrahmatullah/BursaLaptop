@@ -1,7 +1,6 @@
-<?php 
+	<?php 
 if($this->session->userdata('level')=='owner' || $this->session->userdata('level')=='developer') {
 	?>
-<h4 align="right" id="totalbeli">Total : Rp <?php echo number_format($total,0,".","."); ?></h4>	
 <?php } ?>
 <form class="form-horizontal" role="form" method="post" action="<?php echo base_url();?>pembelian/add_cart">
 
@@ -45,22 +44,21 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 <table class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
-					<th class="center" width="10%">No</th>
-					<th class="center">Nama Barang</th>
-					<th class="center">Harga</th>
-					<th class="center">Jml Beli</th>
-					<th class="center" width="40%">Actions</th>
-				</tr>
+					<th class="center" width="10%">ID Pesan</th>
+					<th class="center" width="20%">Nama Pelanggan</th>
+					<th class="center" width="20%">Laptop</th>
+					<th class="center" width="20%">Tanggal Pesan</th>
+					<th class="center" width="20%">Actions</th>
+				</tr>	
 			</thead>
 			<tbody>
 			<!-- PHP -->
 				<?php 
-				$no = 1;
 				foreach ($cart as $items) { ?>
 			<tr>
-				<td class="center"><?php echo $no++ ;?></td>
-				<td class="center"><?php echo $items->name;?></td>
-				<td class="center"><?php echo number_format($items->price,0,".",".");?></td>
+				<td class="center"><?php echo $items->id_pesan ;?></td>
+				<td class="center"><?php echo $items->nama_pelanggan;?></td>
+				<td class="center"><?php echo $items->tgl_pesan?></td>
 				<td contenteditable="true" onBlur="updatepembelian(this,'qty','<?php echo $items->id; ?>')" onClick="showEdit(this);"><?php echo $items->qty; ?></td>
 				<td>
 				<a href="<?php echo base_url();?>pembelian/del_cart/<?php echo $items->no;?>" class="btn btn-danger"><i class="fa fa-close"></i> Delete</a>

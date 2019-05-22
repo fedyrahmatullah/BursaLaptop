@@ -10,7 +10,7 @@ foreach ($pel as $a) {
 			<div class="form-group">
 				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Nama</label>
 				<div class="col-sm-9">
-				<input type="hidden" name="id" value="<?php echo $a->no;?>">
+				<input type="hidden" name="id" value="<?php echo $a->id;?>">
 				<input type="text" id="form-field-1" class="col-xs-10 col-sm-8" name="nama" value="<?php echo $a->nama; ?>" />
 				</div>
 			</div>

@@ -17,13 +17,13 @@ class Main extends CI_Controller {
 	} else {
 		if($this->session->has_userdata('username')) {
 		$data = array(
-			'sidebar' 	=> 'Inventory',
+			'sidebar' 	=> 'Dashboard',
 			'menu' 		=> 'active',
 		);
 
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$data);
-		$this->load->view('inventory',$data);
+		$this->load->view('dashboard',$data);
 		$this->load->view('template/footer');
 
 	} else {
@@ -60,7 +60,7 @@ class Main extends CI_Controller {
 					
 				$session = $this->session->set_userdata($data);
 				// echo $this->session->userdata("username");
-					redirect('inventory');
+					redirect('dashboard');
 			}else {
 				redirect('main/gagal_login');
 			}		

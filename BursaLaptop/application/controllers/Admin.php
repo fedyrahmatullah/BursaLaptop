@@ -34,12 +34,18 @@ class Admin extends CI_Controller {
 		$password 	= password_hash($this->input->post('password',TRUE),PASSWORD_DEFAULT);
 		$level 		= $this->input->post('level',TRUE);
 		$namalgkp	= $this->input->post('nama',TRUE);
+		$alamat		= $this->input->post('alamat',TRUE);
+		$notlp		= $this->input->post('notlp',TRUE);
+		$foto		= $this->input->post('foto',TRUE);
 
 		$data = array(
 		'username' 		=> $username,
 		'nama_lengkap'	=> $namalgkp,
 		'password' 		=> $password,
-		'level'			=> $level
+		'level'			=> $level,
+		'alamat'		=> $alamat,
+		'notlp'			=> $notlp,
+		'foto'			=> $foto,
 		 );
 
 		$this->M_admin->tambah($data,'tbl_admin');

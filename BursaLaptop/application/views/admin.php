@@ -11,23 +11,30 @@
 <table id="dynamic-table" class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
-					<th class="center" width="10%">No</th>
-					<th class="center">Username</th>
-					<th class="center">Nama Lengkap</th>
-					<th class="center">Status</th>
-					<th class="center" width="40%">Actions</th>
+					<th class="center" width="4%">No</th>
+					<th class="center">Foto</th>
+					<th class="center" width="1%">Username</th>
+					<th class="center" width="15%">Nama Lengkap</th>
+					<th class="center">Alamat</th>
+					<th class="center" width="9%">No Telepon</th>
+					<th class="center" width="6%">Status</th>
+					<th class="center" width="32%">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
 			<!-- PHP -->
-			<tr>
+			
 			<?php 
 			$no = 1;
 			foreach ($admin as $a ) {
 			?>
+			<tr height="150	px">
 				<td class="center"><?php echo $no++;?></td>
+				<td class="center"><?php echo $a->foto; ?></td>
 				<td class="center"><?php echo $a->username; ?></td>
 				<td class="center"><?php echo $a->nama_lengkap; ?></td>
+				<td class="center"><?php echo $a->alamat; ?></td>
+				<td class="center"><?php echo $a->notlp; ?></td>
 				<td class="center"><?php echo $a->level; ?></td>
 				<td class="center">
 				<a href="<?php echo base_url();?>admin/edit/<?php echo $a->id;?>" class="btn btn-primary" data-toggle="modal" data-target="#edit-admin"><i class="fa fa-pencil"></i> Edit</a>
@@ -40,7 +47,7 @@
 </div>
 </div>
 </div>
-<!-- FORM MODAL -->
+<!-- FORM MODAL Tambah Admin -->
 <div id="add-admin" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -63,6 +70,18 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Alamat</label>
+				<div class="col-sm-9">
+				<input type="text" id="form-field-1" class="col-xs-10 col-sm-8" name="alamat" />
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Nomor Telepon</label>
+				<div class="col-sm-9">
+				<input type="text" id="form-field-1" class="col-xs-10 col-sm-8" name="notlp" />
+				</div>
+			</div>
+			<div class="form-group">
 				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Password</label>
 				<div class="col-sm-9">
 				<input type="password" id="form-field-1" class="col-xs-10 col-sm-8" name="password" />
@@ -77,6 +96,16 @@
 					<option value="service">SERVICE</option>
 				</select>
 				</div>
+			</div>
+			<div class="form-group" >
+				  	<div class="file-field" style="float:center">
+					 	 <div class ="btn btn-primary btn-sm">
+							<input type="file" name="foto">
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path-validate" type="text" placeholder="Unggah Foto Anda">
+						</div>
+					</div>
 			</div>
 		</div>
 		<div class="modal-footer">

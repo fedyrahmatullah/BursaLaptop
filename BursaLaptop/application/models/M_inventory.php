@@ -1,8 +1,8 @@
 <?php
 class M_inventory extends CI_Model {
 	var $table = 'tbl_barang';
-    var $column_order = array(null, 'nama','kategori','sub_1','sub_2','sub_3','harga_beli','harga_jual','stok'); //set column field database for datatable orderable
-    var $column_search = array('nama','kategori','sub_1','sub_2','sub_3','harga_beli','harga_jual','stok'); //set column field database for datatable searchable 
+    var $column_order = array(null, 'nama','kategori','jenis','harga_beli','harga_jual','stok'); //set column field database for datatable orderable
+    var $column_search = array('nama','kategori','jenis','harga_beli','harga_jual','stok'); //set column field database for datatable searchable 
     var $order = array('id' => 'asc'); // default order 
 
 	function tampil() {
@@ -24,8 +24,8 @@ class M_inventory extends CI_Model {
 		return $this->db->get('tbl_kategori');
 	}
 
-	function tambah($data,$table) {
-		$this->db->insert($table,$data);
+	function tambah_barang($data,$table) {
+        $this->db->insert('tbl_barang',$data);
 	}
 
 	function edit($data) {
@@ -58,17 +58,17 @@ class M_inventory extends CI_Model {
 		return $this->db->query("SELECT kategori FROM tbl_kategori WHERE kategori <> '$kat'");
 	}
 
-	function x_sub_1($sub_1) {
-		return $this->db->query("SELECT DISTINCT(sub_1) FROM tbl_barang WHERE sub_1 <> '$sub_1'");
+	function x_jenis($jenis) {
+		return $this->db->query("SELECT DISTINCT(jenis) FROM tbl_barang WHERE jenis <> '$jenis'");
 	}
 
-	function x_sub_2($sub_2) {
-		return $this->db->query("SELECT DISTINCT(sub_2) FROM tbl_barang WHERE sub_2 <> '$sub_2'");
-	}
+	//function x_sub_2($sub_2) {
+	//	return $this->db->query("SELECT DISTINCT(sub_2) FROM tbl_barang WHERE sub_2 <> '$sub_2'");
+	//}
 
-	function x_sub_3($sub_3) {
-		return $this->db->query("SELECT DISTINCT(sub_3) FROM tbl_barang WHERE sub_3 <> '$sub_3'");
-	}
+	//function x_sub_3($sub_3) {
+	//	return $this->db->query("SELECT DISTINCT(sub_3) FROM tbl_barang WHERE sub_3 <> '$sub_3'");
+	//}
 
 
 	//SERVERSIDE DATATABLES

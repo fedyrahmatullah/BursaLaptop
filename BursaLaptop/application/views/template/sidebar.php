@@ -4,9 +4,23 @@ if($this->session->userdata('level')=='owner') {
 ?>
 <div id="sidebar" class="sidebar responsive">
 <ul class="nav nav-list">
+	<li class="<?php 
+		if($sidebar=='Dashboard') {
+		if(isset($menu)) { 
+		echo $menu; } else {
+		echo "";
+		}
+		}	
+		?>">
+			<a href="<?php echo base_url();?>dashboard">
+				<i class="menu-icon fa fa-home"></i>
+				<span class="menu-text">Dashboard</span>
+			</a>
+			<b class="arrow"></b>
+		</li>
 	<li class="
 	<?php 
-	if($sidebar=='Inventory') {
+	if($sidebar=='Daftar Barang') {
 	if(isset($menu)) { 
 	echo $menu; } else {
 	echo "";
@@ -15,7 +29,7 @@ if($this->session->userdata('level')=='owner') {
 	?>">
 		<a href="<?php echo base_url();?>inventory">
 			<i class="menu-icon fa fa-cubes"></i>
-			<span class="menu-text">Inventory Barang</span>
+			<span class="menu-text">Daftar Barang</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -113,7 +127,8 @@ if($this->session->userdata('level')=='owner') {
 	?>">
 		<a href="<?php echo base_url();?>pembelian">
 			<i class="menu-icon fa fa-cube"></i>
-			<span class="menu-text">Pembelian</span>
+			<span class="menu-text">Pesanan Service </span>
+			<span class="badge badge-danger">0</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -277,7 +292,8 @@ if($this->session->userdata('level')=='owner') {
 	</li>
 
 
-</ul><!-- /.nav-list -->
+</ul>
+<!-- /.nav-list -->
 
 <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 	<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
@@ -287,14 +303,13 @@ if($this->session->userdata('level')=='owner') {
 	try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
 </script>
 </div>
-<?php } 
 
+<?php } 
 //navbar admin
 else if ($this->session->userdata('level')=='admin'){ ?>
 <div id="sidebar" class="sidebar responsive">
 <ul class="nav nav-list">
-	<li class="
-	<?php 
+	<li class="<?php 
 	if($sidebar=='Dashboard') {
 	if(isset($menu)) { 
 	echo $menu; } else {
@@ -364,7 +379,7 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	
 	<li class="
 	<?php 
-	if($sidebar=='Inventory') {
+	if($sidebar=='Daftar Barang') {
 	if(isset($menu)) { 
 	echo $menu; } else {
 	echo "";
@@ -394,7 +409,7 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	</li>
 
 	<li class="<?php 
-	if($sidebar=='Pembelian') {
+	if($sidebar=='Pesanan Service') {
 	if(isset($menu)) { 
 	echo $menu; } else {
 	echo "";
@@ -403,7 +418,8 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	?>">
 		<a href="<?php echo base_url();?>pembelian">
 			<i class="menu-icon fa fa-cube"></i>
-			<span class="menu-text">Pesanan Service</span>
+			<span class="menu-text">Pesanan Service </span>
+			<span class="badge badge-danger">0</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -423,7 +439,9 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 		<b class="arrow"></b>
 	</li>
 
-</ul><!-- /.nav-list -->
+</ul>
+
+<!-- /.nav-list -->
 
 <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 	<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
@@ -433,7 +451,49 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
 </script>
 </div>
+
+<?php } 
+//navbar Bagian service
+else if ($this->session->userdata('level')=='service'){ ?>
+<div id="sidebar" class="sidebar responsive">
+<ul class="nav nav-list">
+	<li class="<?php 
+	if($sidebar=='Dashboard') {
+	if(isset($menu)) { 
+	echo $menu; } else {
+	echo "";
+	}
+	}	
+	?>">
+		<a href="<?php echo base_url();?>dashboard">
+			<i class="menu-icon fa fa-home"></i>
+			<span class="menu-text">Dashboard</span>
+		</a>
+		<b class="arrow"></b>
+	</li>
+
+	
+
+</ul>
+
+
+
+
+<!-- /.nav-list -->
+
+<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+	<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+</div>
+
+<script type="text/javascript">
+	try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+</script>
+</div>
+
+
 <?php } ?>
+
+
 <div class="main-content">
 <div class="main-content-inner">
 	<div class="breadcrumbs" id="breadcrumbs">
@@ -460,3 +520,5 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 			</li>
 		</ul><!-- /.breadcrumb -->
 	</div>
+
+	

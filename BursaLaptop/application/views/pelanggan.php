@@ -14,8 +14,10 @@
 					<th class="center" width="10%">No</th>
 					<th class="center">Nama</th>
 					<th class="center">Alamat</th>
+					<th class="center">Email</th>
 					<th class="center">No HP</th>
-					<th class="center" width="40%">Actions</th>
+					<th class="center">Password</th>
+					<th class="center" width="15%">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -28,10 +30,11 @@
 				<td class="center"><?php echo $no++;?></td>
 				<td class="center"><?php echo $p->nama; ?></td>
 				<td class="center"><?php echo $p->alamat; ?></td>
+				<td class="center"><?php echo $p->email; ?></td>
 				<td class="center"><?php echo $p->no_hp; ?></td>
+				<td class="center"><?php echo $p->password; ?></td>
 				<td class="center">
-				<a href="<?php echo base_url();?>pelanggan/edit/<?php echo $p->no;?>" class="btn btn-primary" data-toggle="modal" data-target="#edit-pell"><i class="fa fa-pencil"></i> Edit</a>
-				<button class="btn btn-danger" onclick="delcust(<?=$p->no;?>)"><i class="fa fa-close"></i> Delete</button>
+				<button class="btn btn-danger" onclick="delcust(<?=$p->id_pelanggan;?>)"><i class="fa fa-close"></i> Delete</button>
 			</tr>
 			<?php  } ?>
 			</tbody>
@@ -45,7 +48,7 @@
 <div class="modal-dialog">
 		<div class="modal-content">
 		<div class="modal-header">
-				<a href="<?php echo base_url();?>penjualan" class="close">&times;</a>
+				<a href="<?php echo base_url();?>pelanggan" class="close">&times;</a>
 		Tambah Pelanggan
 		</div>
 		<form class="form-horizontal" method="post" role="form" action="<?=base_url();?>pelanggan/simpan_pelanggan">
@@ -53,23 +56,34 @@
 			<div class="form-group">
 	<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Nama Pelanggan </label>
 	<div class="col-sm-9">
-		<input type="text" class="col-xs-10 col-sm-5" name="nama_pelanggan" id="nama_pelanggan" required="true" />
+		<input type="text" class="col-xs-10 col-sm-6" name="nama_pelanggan" id="nama_pelanggan" required="true" />
 	</div>
 	</div>
 
 	<div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Alamat </label>
-	<div class="col-sm-9">
-		<input type="text" class="col-xs-10 col-sm-5" name="alamat" id="alamat" required="true" />
+		<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Alamat </label>
+		<div class="col-sm-9">
+		<input type="text" class="col-xs-10 col-sm-6" name="alamat" id="alamat" required="true" />
+		</div>
 	</div>
-	</div>
-
 	<div class="form-group">
-	<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> No HP </label>
-	<div class="col-sm-9">
-		<input type="text" class="col-xs-10 col-sm-5" name="no_hp" id="no_hp" required="true" />
+		<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Email </label>
+		<div class="col-sm-9">
+		<input type="text" class="col-xs-10 col-sm-6" name="email" id="email" required="true" />
+		</div>
 	</div>
-	</div>
+	<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> No HP </label>
+				<div class="col-sm-9">
+				<input type="text" class="col-xs-10 col-sm-5" name="no_hp" id="no_hp" required="true" />
+				</div>
+			</div>
+	<div class="form-group">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Password</label>
+				<div class="col-sm-9">
+				<input type="password" id="form-field-1" class="col-xs-10 col-sm-6" name="password" />
+				</div>
+			</div>
 		</div>
 		<div class="modal-footer">
 		<button type="submit" class="btn btn-success" id="savecust"><i class="fa fa-save"></i> Simpan</button>

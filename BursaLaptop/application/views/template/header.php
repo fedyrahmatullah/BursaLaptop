@@ -48,10 +48,10 @@
 				</a>
 			</div>
 			
-			<div class="navbar-buttons navbar-header pull-right" role="navigation" style="background-color:red">
+			<div class="navbar-buttons navbar-header pull-right" role="navigation">
 				<ul class="nav ace-nav">
-					<li class="light-blue">
-						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+					<li>
+						<a data-toggle="dropdown" style="background-color:red; " href="#" class="dropdown-toggle">
 							<img class="nav-user-photo" src="<?php echo base_url();?>assets/images/user.png" />
 							<span class="user-info">
 								<small>Welcome,</small>

@@ -41,7 +41,7 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 <?php 
 if($this->session->userdata('level')=='owner' || $this->session->userdata('level')=='admin') {
 	?>
-<table class="table table-striped table-bordered table-hover">
+<table id="dynatable"  class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
 					<th class="center" width="10%">ID Pesan</th>
@@ -69,9 +69,9 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 			</tbody>
 		</table>
 <?php } else { ?>
-	<table class="table table-striped table-bordered table-hover">
+	<table id="dynatable" class="table table-striped table-bordered table-hover">
 			<thead>
-				<tr>
+                <tr>
 					<th class="center" width="15%">ID Pesanan</th>
 					<th class="center" width="23%">Nama Pelanggan</th>
 					<th class="center" width="23%">Laptop </th>

@@ -102,7 +102,7 @@ if($this->session->userdata('level')=='owner') {
 		<b class="arrow"></b>
 	</li>
 
-	<li class="<?php 
+	<!--<li class="<?php 
 	if($sidebar=='Penjualan') {
 	if(isset($menu)) { 
 	echo $menu; } else {
@@ -131,10 +131,10 @@ if($this->session->userdata('level')=='owner') {
 			<span class="badge badge-danger">0</span>
 		</a>
 		<b class="arrow"></b>
-	</li>
+	</li>-->
 
 
-	<li class="<?php 
+	<!--<li class="<?php 
 	if($sidebar=='Tukar_tambah') {
 	if(isset($menu)) { 
 	echo $menu; } else {
@@ -147,70 +147,7 @@ if($this->session->userdata('level')=='owner') {
 			<span class="menu-text">Tukar Tambah</span>
 		</a>
 		<b class="arrow"></b>
-	</li>
-
-	<li class="<?php 
-	if($sidebar=='Akunting') {
-	if(isset($menu)) { 
-	echo $menu; } else {
-	echo "";
-	}
-	}	
-	?>">
-		<a href="#" class="dropdown-toggle">
-			<i class="menu-icon fa fa-book"></i>
-			<span class="menu-text"> Akunting </span>
-
-			<b class="arrow fa fa-angle-down"></b>
-		</a>
-
-		<b class="arrow"></b>
-
-		<ul class="submenu">
-			<li class="">
-				<a href="<?php echo base_url();?>akunting/ref">
-					<i class="menu-icon fa fa-book"></i>
-					Reference
-				</a>
-
-				<b class="arrow"></b>
-			</li>
-
-			<li class="">
-				<a data-toggle="modal" data-target="#mod_neraca">
-					<i class="menu-icon fa fa-book"></i>
-					Input Modal Awal <!--MODAL ADA DI FOOTER-->
-				</a>
-
-				<b class="arrow"></b>
-			</li>
-
-
-			<li class="">
-				<a data-toggle="modal" data-target="#mod_pers_awal">
-					<i class="menu-icon fa fa-book"></i>
-					Tutup Persediaan Akhir Bulan <!--MODAL ADA DI FOOTER-->
-				</a>
-
-				<b class="arrow"></b>
-			</li>
-			<li class="">
-				<a href="<?php echo base_url();?>akunting/jurnal_umum">
-					<i class="menu-icon fa fa-book"></i>
-					Jurnal Umum
-				</a>
-
-				<b class="arrow"></b>
-			</li>
-
-			<li class="">
-				<a href="<?php echo base_url();?>akunting/buku_besar">
-					<i class="menu-icon fa fa-book"></i>
-					Posting Buku Besar
-				</a>
-
-				<b class="arrow"></b>
-			</li>
+	</li>-->
 
 			<!-- <li class="">
 				<a href="<?php echo base_url();?>akunting/neraca_percobaan">
@@ -221,7 +158,7 @@ if($this->session->userdata('level')=='owner') {
 				<b class="arrow"></b>
 			</li> -->
 
-			<li class="">
+			<!--<li class="">
 				<a href="<?php echo base_url();?>akunting/lap_rugi_laba">
 					<i class="menu-icon fa fa-book"></i>
 					Laporan Rugi Laba
@@ -289,7 +226,7 @@ if($this->session->userdata('level')=='owner') {
 
 				<b class="arrow"></b>
 			</li>
-	</li>
+	</li>-->
 
 
 </ul>
@@ -394,21 +331,6 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	</li>
 
 	<li class="<?php 
-	if($sidebar=='Penjualan') {
-	if(isset($menu)) { 
-	echo $menu; } else {
-	echo "";
-	}
-	}	
-	?>">
-		<a href="<?php echo base_url();?>penjualan">
-			<i class="menu-icon fa fa-shopping-cart"></i>
-			<span class="menu-text">Penjualan</span>
-		</a>
-		<b class="arrow"></b>
-	</li>
-
-	<li class="<?php 
 	if($sidebar=='Pesanan Service') {
 	if(isset($menu)) { 
 	echo $menu; } else {
@@ -417,24 +339,24 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 	}	
 	?>">
 		<a href="<?php echo base_url();?>pembelian">
-			<i class="menu-icon fa fa-cube"></i>
+			<i class="menu-icon fa fa-paper-plane"></i>
 			<span class="menu-text">Pesanan Service </span>
 			<span class="badge badge-danger">0</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
 
-			<li class="<?php 
-	if($sidebar=='Tukar_tambah') {
+	<li class="<?php 
+	if($sidebar=='Servicedikerjakan') {
 	if(isset($menu)) { 
 	echo $menu; } else {
 	echo "";
 	}
 	}	
 	?>">
-		<a href="<?php echo base_url();?>tukar_tambah">
-			<i class="menu-icon fa fa-paper-plane"></i>
-			<span class="menu-text">Tukar Tambah</span>
+		<a href="<?php echo base_url();?>Servicedikerjakan">
+			<i class="menu-icon fa fa-shopping-cart"></i>
+			<span class="menu-text">Service dikerjakan</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -452,6 +374,7 @@ else if ($this->session->userdata('level')=='admin'){ ?>
 </script>
 </div>
 
+
 <?php } 
 //navbar Bagian service
 else if ($this->session->userdata('level')=='service'){ ?>
@@ -465,9 +388,24 @@ else if ($this->session->userdata('level')=='service'){ ?>
 	}
 	}	
 	?>">
-		<a href="<?php echo base_url();?>dashboard">
+		<a href="<?php echo base_url();?>Dashboard">
 			<i class="menu-icon fa fa-home"></i>
 			<span class="menu-text">Dashboard</span>
+		</a>
+		<b class="arrow"></b>
+	</li>
+
+	<li class="<?php 
+	if($sidebar=='Servicedikerjakan') {
+	if(isset($menu)) { 
+	echo $menu; } else {
+	echo "";
+	}
+	}	
+	?>">
+		<a href="<?php echo base_url();?>Servicedikerjakan">
+			<i class="menu-icon fa fa-wrench"></i>
+			<span class="menu-text">Pesanan Dikerjakan</span>
 		</a>
 		<b class="arrow"></b>
 	</li>
@@ -503,7 +441,7 @@ else if ($this->session->userdata('level')=='service'){ ?>
 		<ul class="breadcrumb">
 			<li>
 				<i class="ace-icon fa fa-home home-icon"></i>
-				<a href="#">Home</a>
+				<a href="#"><?php echo $this->session->userdata('level'); ?></a>
 			</li>
 			<li>
 				<a href="#"><?php echo $sidebar; ?></a>

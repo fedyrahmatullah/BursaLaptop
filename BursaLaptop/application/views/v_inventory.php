@@ -87,51 +87,8 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 	</div>
 </div>
 </div>
-<!--TAMBAH BARANG-->
-	
-	<h4>Tambah Barang Baru</h4>
-		<table id="dynatable" class="table table-striped table-bordered table-hover" action="<?php echo base_url();?>admin/add_data_ajax" >
-			<thead>
-				<tr>
-					<th class="center" width="5%">No</th>
-					<th class="center">Nama Barang</th>
-					<th class="center">Kategori</th>
-					<th class="center">Jenis</th>
-					<th class="center">Harga Beli</th>
-					<th class="center">Harga Jual</th>
-					<th class="center">Stok</th>
-					<th class="center" width="20%">Actions</th>
-				</tr>
-			</thead>
-			<tbody>
-			<tr>  
-          	<td></td>  
-            <td><div id="col_nama"  contenteditable="true" style="height: 55px;"></div></td>  
-            <td><div id="col_kat"  style="height: 55px;">
-            <select class="form-control" name="kategori" id="d_kat">
-               <option>Pilih Kategori</option>
-						<?php 
-						foreach ($kategori as $k) {
-						?>
-					<option><?php echo $k->kategori;?></option>
-						<?php } ?>
-				</select>
-               </div>
-            </td>  
-            <td>
-            	<select class="form-control" id="d_jenis">
-            		<option></option>
-            	</select>
-            </td>  
-            <td><div id="col_harga_b" contenteditable="true" style="height: 55px;"></div></td>  
-            <td><div id="col_harga_j" contenteditable="true" style="height: 55px;"></div></td>
-            <td><div id="col_stok" contenteditable="true" style="height: 55px;"></div></td>  
-            <td><button type="button" name="btn_add" id="btn_add" class="btn btn-success"><i class="fa fa-plus"   action="<?php echo base_url();?>admin/add_data_ajax"></i> Tambah</button></td>  
-        	</tr>
-		</tbody>
-	</table>
-	<?php } 
-	
+
+	<?php } 	
 	//tampilan admin
 	else { ?>
 

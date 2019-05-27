@@ -24,11 +24,11 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 
 <!--Open Modal TAMBAH BARANG-->
 <div id="add-barang" class="modal fade" role="dialog">
-<div class="modal-dialog">
+<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 		<div class="modal-header">
 				<a href="<?php echo base_url();?>inventory" class="close">&times;</a>
-		Tambah Barang
+				<h4><center>Tambah Barang<center><h4>
 		</div>
 		<form class="form-horizontal" method="post" role="form" action="<?=base_url();?>inventory/simpan_barang">
 		<div class="modal-body">
@@ -41,7 +41,7 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 
 	<div class="form-group">
 	<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Kategori </label>
-			<div class="col-sm-9">
+			<div class="col-sm-3">
 				<select class="form-control" name="kategori" id="kategori">
          	      	<option>Pilih Kategori</option>
 							<?php 
@@ -61,7 +61,7 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 	<div class="form-group">
 				<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Harga Beli </label>
 				<div class="col-sm-9">
-				<input type="number" class="col-xs-10 col-sm-5" name="harga_beli" id="harga_beli" required="true" />
+				<input type="number" class="col-xs-10 col-sm-6" name="harga_beli" id="harga_beli" required="true" />
 				</div>
 			</div>
 	<div class="form-group">
@@ -100,6 +100,7 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 			<th class="center">Kategori</th>
 			<th class="center">Jenis</th>
 			<th class="center">Harga Jual</th>
+			<th class="center">Harga Beli</th>
 			<th class="center">Stok</th>
 		</tr>
 	</thead>
@@ -153,5 +154,7 @@ if($this->session->userdata('level')=='owner' || $this->session->userdata('level
 				$('#d_sub_1').html(data);
 			}
 		});
+
+		
 	});
 </script>

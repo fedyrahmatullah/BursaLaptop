@@ -26,7 +26,7 @@ class Pelanggan extends CI_Controller {
 	
 	public function simpan_pelanggan() {
 		$data = array(
-		'nama' 	 => $this->input->post('nama_pelanggan',TRUE),
+		'nama_pelanggan' => $this->input->post('nama_pelanggan',TRUE),
 		'alamat' => $this->input->post('alamat',TRUE),
 		'email' => $this->input->post('email',TRUE),
 		'no_hp'  => $this->input->post('no_hp',TRUE),

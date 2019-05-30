@@ -47,11 +47,6 @@ class Main extends CI_Controller {
 			$hash 	= $get['password'];
 
 			if(password_verify($password,$hash)) {
-					#CEK MODAL OWNER 
-				$owner = $this->M_main->cek_modal()->num_rows();
-				// if($owner == 0) { 	#JIKA BELUM INPUT MODAL 
-				// 	$this->load->view('input_modal');
-				// } else {
 
 				$data = array(
 					'username'  => $get['username'] ,

@@ -28,7 +28,7 @@
 			foreach ($pelanggan as $p) {
 			?>
 				<td class="center"><?php echo $no++;?></td>
-				<td class="center"><?php echo $p->nama; ?></td>
+				<td class="center"><?php echo $p->nama_pelanggan; ?></td>
 				<td class="center"><?php echo $p->alamat; ?></td>
 				<td class="center"><?php echo $p->email; ?></td>
 				<td class="center"><?php echo $p->no_hp; ?></td>
@@ -95,10 +95,7 @@
 </div>
 </div>
 
-<!-- FORM EDIT admin-->
-<div id="edit-pell" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
-	<div class="modal-dialog">
-	<div class="modal-content">
-</div>
+
+
 </div>
 </div>

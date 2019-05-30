@@ -26,6 +26,7 @@ foreach ($adm as $a) {
 				<select class="col-xs-10 col-sm-8" name="level">
 					<option value="owner">OWNER</option>
 					<option value="admin">ADMIN</option>
+					<option value="service">Bagian Service</option>
 				</select>
 				</div>
 			</div>

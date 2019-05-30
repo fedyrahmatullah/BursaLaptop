@@ -8,7 +8,7 @@ class Pembelian extends CI_Controller {
 		parent:: __construct();
 		$this->load->model('M_pembelian');
 		$this->load->model('M_inventory');
-		$this->load->model('M_penjualan');
+	
 	}
 	public function index() {
 
@@ -20,6 +20,7 @@ class Pembelian extends CI_Controller {
 		'nonota' 	=> $this->getnonota(),
 		'brg' 		=> $this->M_pembelian->tampil_brg()->result(),
 		'sidebar'	=> "Pesanan Service",
+		'cart' => $this->M_pembelian->tampil_cart($where,'tbl_temp_beli')->result(),
 		'kategori'	=> $this->M_inventory->tampil_kategori()->result(),
 		'menu'		=> "active",
 		 );

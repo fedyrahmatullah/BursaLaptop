@@ -6,7 +6,9 @@
 	</div><!-- /.page-header -->
 
 
-<div id="view_beli"></div>
+<div id="view_beli">
+
+
 
 </div>
 

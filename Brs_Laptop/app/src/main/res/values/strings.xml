@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Bursa Laptop</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="pesan">Pesan</string>
+    <string name="hot_products">HOT PRODUCTS</string>
+    <string name="lihat_lainnya">Lihat Lainnya ></string>
+    <string name="informasi_service">Informasi Service</string>
+    <string name="pesanan_servis_masuk">Pesanan Servis Masuk</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

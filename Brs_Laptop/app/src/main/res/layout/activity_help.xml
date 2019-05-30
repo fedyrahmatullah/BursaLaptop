@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Navigation.HelpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Cara memesan Produk"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Pada halaman produk klik produk yang diinginkan kemudian produk yang dipilih akan masuk kedalam form keranjang dan form keranjang sudah tertera harga yang harus dibayar sesuai dengan permntaan pelanggan "
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Cara mendaftarkan produk yang akan diservis"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Klik form Service. didalam form service sudah terdapat step untuk mendaftarkan laptop yang akan diservis kemudian klik Pesan Jasa Servis jika ingin menyervis. Kemudian isikan Laptop yang diservis sesuai dengan laptop dan kerusakan yang dialaminya kemudian klik Pesan Jasa dan laptop tersebut harus diantar ke toko jika ingin diservis."
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="3. Akun"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="untuk memesan produk dan ingin melakukan servis harus login terlebih dahulu sesuai dengan email dan password yang sudah ada. Jika tidak memiliki akun, kilk tombol Belum Punya Akun dengan mengisi nama, email, no telepon, password dan konfirmasi password. dan jika pelanggan lupa akan passwordnya dapat mengecek nya dengan klik lupa pasword dan bisa mengganti dengan password baru"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

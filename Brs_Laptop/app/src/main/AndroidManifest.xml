@@ -18,6 +18,29 @@
         </activity>
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".Navigation.ServiceActivity"
+            android:label="Service" />
+        <activity
+            android:name=".Navigation.RiwayatServiceActivity"
+            android:label="Keranjang" />
+        <activity
+            android:name=".Navigation.AccountActivity"
+            android:label="Account" />
+        <activity android:name=".Navigation.LogoutActivity" />
+        <activity
+            android:name=".Navigation.HelpActivity"
+            android:label="Help" />
+        <activity
+            android:name=".Navigation.AboutActivity"
+            android:label="About" />
+        <activity android:name=".Navigation.AccountActivity2" />
+        <activity android:name=".Notif1" />
+        <activity android:name=".PesananJasaService" />
+        <activity android:name=".ServisDalamPengerjaan" />
+        <activity android:name=".ServiceSelesai" />
+        <activity android:name=".PesananService" />
+        <activity android:name=".Navigation.Account2"></activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

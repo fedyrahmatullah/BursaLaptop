@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryDark">#ff2b2a</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="black">#000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="signupColor">#066e8a</color>
+    <color name="grey">#808080</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorGray">#8b8b8b</color>
+    <color name="color1">	#f0e4e4</color>
+    <color name="merah">#FF2B2A</color>
 </resources>

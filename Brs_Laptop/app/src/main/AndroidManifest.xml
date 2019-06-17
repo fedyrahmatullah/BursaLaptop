@@ -19,28 +19,68 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".MainActivity"/>
         <activity
-            android:name=".Navigation.ServiceActivity"
-            android:label="Service" />
-        <activity
-            android:name=".Navigation.RiwayatServiceActivity"
-            android:label="Keranjang" />
+            android:name=".Navigation.AboutActivity"
+            android:label="About">
+        </activity>
         <activity
             android:name=".Navigation.AccountActivity"
-            android:label="Account" />
-        <activity android:name=".Navigation.LogoutActivity" />
+            android:label="Account"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Navigation.AccountActivity2"
+            android:label="Edit Account"
+            android:parentActivityName=".Navigation.AccountActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Navigation.AccountActivity" />
+        </activity>
         <activity
             android:name=".Navigation.HelpActivity"
-            android:label="Help" />
+            android:label="Help"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
-            android:name=".Navigation.AboutActivity"
-            android:label="About" />
-        <activity android:name=".Navigation.AccountActivity2" />
-        <activity android:name=".Notif1" />
-        <activity android:name=".PesananJasaService" />
-        <activity android:name=".ServisDalamPengerjaan" />
-        <activity android:name=".ServiceSelesai" />
-        <activity android:name=".PesananService" />
-        <activity android:name=".Navigation.Account2"></activity>
+            android:name=".Navigation.LogoutActivity">
+        </activity>
+        <activity
+            android:name=".PesananJasaService"
+            android:label="Pesanan Jasa Service"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ServisDalamPengerjaan"
+            android:label="Servis Dalam Pengerjaan"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ServiceSelesai"
+            android:label="Servis Selesai"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".PesananService"
+            android:label="Pesanan Service"
+            android:parentActivityName=".PesananJasaService">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

@@ -6,11 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".PesananService">
 
-    <ScrollView
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="452dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="59dp"
+        android:padding="10dp"
         android:scrollbars="vertical"
-        android:padding="10dp">
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,11 +40,12 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="ID PESANAN"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=": LPT290146"/>
+                    android:text=": LPT290146" />
 
             </LinearLayout>
 
@@ -43,11 +58,12 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="MEREK LAPTOP"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=": Toshiba"/>
+                    android:text=": Toshiba" />
 
             </LinearLayout>
 
@@ -60,11 +76,12 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="TYPE LAPTOP"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=": C55t"/>
+                    android:text=": C55t" />
 
             </LinearLayout>
 
@@ -77,11 +94,12 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="DIAGNOSA KERUSAKAN AWAL"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=": Engsel patah"/>
+                    android:text=": Engsel patah" />
 
             </LinearLayout>
 
@@ -94,11 +112,12 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="ESTIMASI WAKTU PENGERJAAN"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=":"/>
+                    android:text=":" />
 
             </LinearLayout>
 
@@ -111,11 +130,12 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="ESTIMASI HARGA"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=":"/>
+                    android:text=":" />
 
             </LinearLayout>
 
@@ -128,38 +148,38 @@
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="UPDATE KERUSAKAN"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=":"/>
+                    android:text=":" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="250dp"
                     android:layout_height="40dp"
                     android:text="STATUS PENGERJAAN"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=":"
-                    />
+                    android:text=":" />
 
             </LinearLayout>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/antrian"/>
-
-
+                android:background="@drawable/antrian" />
 
 
         </LinearLayout>

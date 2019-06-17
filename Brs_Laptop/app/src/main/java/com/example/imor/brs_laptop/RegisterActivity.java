@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         //if the user is already logged in we will directly start the MainActivity (profile) activity
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, HomeFragment.class));
+            startActivity(new Intent(this, MainActivity.class));
             return;
         }
 
@@ -147,7 +147,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 //starting the profile activity
                                 finish();
-                                startActivity(new Intent(getApplicationContext(), HomeFragment.class));
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             } else {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }

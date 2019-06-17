@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, HomeFragment.class));
+            startActivity(new Intent(this, MainActivity.class));
         }
 
         progressBar = findViewById(R.id.progressBar);
@@ -116,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
                                 //starting the profile activity
                                 finish();
-                                startActivity(new Intent(getApplicationContext(), HomeFragment.class));
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             } else {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }

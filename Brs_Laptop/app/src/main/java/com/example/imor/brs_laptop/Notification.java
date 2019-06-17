@@ -11,19 +11,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-/**
- * Created by Jauhar xlr on 4/18/2016.
- * mycreativecodes.in
- */
-public class NotificationFragment extends Fragment {
-
-    public NotificationFragment(){
-
-    }
+public class Notification extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.notification_layout, container, false);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
         final String[] items = new String[]{"Pesanan Jasa Service","Servis Dalam Pengerjaan","Service Selesai"};
@@ -49,6 +41,6 @@ public class NotificationFragment extends Fragment {
             }
         });
         return rootView;
-
     }
 }
+

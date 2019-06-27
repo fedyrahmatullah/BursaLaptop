@@ -1,13 +1,4 @@
-# sibengkel
-Sistem Informasi Bengkel + Akuntansi ( Aplikasi belum 100% Sempurna setidaknya sudah jalan cukup baik ) 
+# ci-restserver
+Check the recent version at https://github.com/chriskacerguis/codeigniter-restserver
 
-Project Based as : 
-- Codeigniter 
-- MySQL
-- Jquery 
-- HTML 5
-- CSS
-
-Silahkan yang mau kontribusi di repo ini, saya bakal seneng jika aplikasi ini terus berkembang nantinya 
-
-
+My alternate version https://github.com/ardisaurus/old-rest-ci

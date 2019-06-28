@@ -8,230 +8,275 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@android:color/white" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        android:padding="10dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="62dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp">
+        android:layout_alignParentLeft="true">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="165dp"
-            android:layout_gravity="center"
-            android:contentDescription="@string/nav_header_desc"
-            android:paddingTop="@dimen/nav_header_vertical_spacing"
-            app:srcCompat="@mipmap/ic_launcher_round" />
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="60dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="270dp">
-
-        <LinearLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white" />
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"
-                android:hint="Nama User"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:textColorHint="#000"
-                android:background="@drawable/tb3" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:textSize="20dp"
-                android:text=": M.Khairul Anwar"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:background="@drawable/tb3" />
-        </LinearLayout>
-
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:padding="10dp"
+            android:scrollbars="vertical">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"
-                android:layout_marginTop="65dp"
-                android:hint="Password"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:textColorHint="#000"
-                android:background="@drawable/tb3" />
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="65dp"
-                android:textSize="20dp"
-                android:text=": *****"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:background="@drawable/tb3" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="62dp">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"
-                android:layout_marginTop="125dp"
-                android:hint="Tanggal Lahir"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:textColorHint="#000"
-                android:background="@drawable/tb3" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="125dp"
-                android:textSize="20dp"
-                android:text=": 5 Agustus 1998"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:background="@drawable/tb3" />
-        </LinearLayout>
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        app:srcCompat="@drawable/account"
+                        tools:ignore="VectorDrawableCompat" />
 
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="60dp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="270dp">
 
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"
-                android:layout_marginTop="180dp"
-                android:hint="Telepon"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:textColorHint="#000"
-                android:background="@drawable/tb3" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="180dp"
-                android:textSize="20dp"
-                android:text=": 085784671***"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:background="@drawable/tb3" />
-        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text="ID Pelanggan"
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="20dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:textSize="20dp"
-                android:layout_marginTop="240dp"
-                android:hint="Email"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:textColorHint="#000"
-                android:background="@drawable/tb3" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="240dp"
-                android:textSize="20dp"
-                android:text=": coba@gmail.com"
-                android:gravity="center|left"
-                android:paddingLeft="15dp"
-                android:textColor="#000"
-                android:background="@drawable/tb3" />
-        </LinearLayout>
+                        <TextView
+                            android:id="@+id/idpelanggan"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text=":"
+                            android:textColor="#000"
+                            android:textSize="20dp" />
+                    </LinearLayout>
 
 
-        <Button
-            android:id="@+id/buttonubah"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="330dp"
-            android:layout_marginEnd="50dp"
-            android:text="Ubah" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
-    </RelativeLayout>
-    </LinearLayout>
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="65dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text="Nama"
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="20dp" />
 
-    </ScrollView>
+                        <TextView
+                            android:id="@+id/nama"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="65dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text=":"
+                            android:textColor="#000"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="125dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text="Alamat"
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="125dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text=": "
+                            android:textColor="#000"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="180dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text="Email"
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="180dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text=":"
+                            android:textColor="#000"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="240dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text="Jenis Kelamin"
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/kelamin"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="240dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text=":"
+                            android:textColor="#000"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="300dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text="No HP"
+                            android:textColor="#000"
+                            android:textColorHint="#000"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/nohp"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="300dp"
+                            android:background="@drawable/tb3"
+                            android:gravity="center|left"
+                            android:paddingLeft="15dp"
+                            android:text=":"
+                            android:textColor="#000"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/buttonubah"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="380dp"
+                        android:layout_marginEnd="50dp"
+                        android:text="Ubah" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
     </LinearLayout>
 
 </RelativeLayout>

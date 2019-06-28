@@ -1,261 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg1"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@drawable/bg1"
-        tools:context=".RegisterActivity">
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:padding="10dp">
 
-
-    <LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="60dp"
-                android:fontFamily="sans-serif"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="0dp"
-                android:gravity="center"
-                android:text="Daftar Pelanggan"
-                android:textColor="@color/black"
-                android:background="@drawable/shapeemail"
-                android:padding="6dp"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textSize="25dp"
-                android:textStyle="bold"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="sans-serif"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="0dp"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="@color/black"
+        android:background="@drawable/shapeemail"
+        android:padding="6dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="25dp"
+        android:textStyle="bold"
         />
 
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true">
 
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nama        "
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp"
-                    android:padding="7dp"
-                    android:layout_marginTop="20dp"/>
-
-
-            <EditText
-                    android:id="@+id/editTextNama"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="20dp"
-                    android:hint="Nama lengkap"
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="6dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#fff"
-                    android:padding="7dp"
-                    android:inputType="text" />
-
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Alamat       "
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp"
-                    android:padding="7dp"
-                    android:layout_marginTop="5dp"/>
-            <EditText
-                    android:id="@+id/editTextAlamat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#fff"
-                    android:padding="7dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="sans-serif"
-                    android:hint="Alamat"
-                    android:layout_marginRight="20dp"
-            />
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No Telepon"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp"
-                    android:padding="7dp"
-                    android:layout_marginTop="5dp"/>
-            <EditText
-                    android:id="@+id/editTextNoTlp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#fff"
-                    android:padding="7dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="sans-serif"
-                    android:hint="No Telepon"
-                    android:layout_marginRight="20dp"
-            />
-        </LinearLayout>
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email "
-                    android:layout_marginBottom="8dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:padding="7dp"
-                    android:layout_marginTop="5dp"/>
-
-            <EditText
-                    android:id="@+id/editTextEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Email"
-                    android:background="#fff"
-                    android:textColor="@color/black"
-                    android:padding="7dp"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginLeft="34dp"
-                    android:layout_marginRight="20dp"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Password                     "
-                    android:layout_marginBottom="8dp"
-                    android:padding="7dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="5dp"/>
-            <EditText
-                    android:id="@+id/editTextPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#fff"
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="8dp"
-                    android:padding="7dp"
-                    android:fontFamily="sans-serif"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
-        </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ulangi Password         "
-                    android:layout_marginBottom="8dp"
-                    android:padding="7dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginTop="5dp"/>
-            <EditText
-                    android:id="@+id/editTextKonfirmasiPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#fff"
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="8dp"
-                    android:padding="7dp"
-                    android:fontFamily="sans-serif"
-                    android:hint="Password"
-                    android:inputType="textPassword" />
-        </LinearLayout>
-
-
-
-
-        <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/shapelogin"
-                android:layout_marginLeft="110dp"
-                android:layout_marginRight="110dp"
-                android:layout_marginTop="30dp"
-                android:textColor="@color/white"
-                android:text="Daftar" />
-
-        <TextView
-                android:id="@+id/textViewLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Sudah Punya Akun?, Log In Disini"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
-    </LinearLayout>
-
-    <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextNama"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.456" />
+            android:hint="Nama"
+            android:textSize="30dp"
+            android:inputType="text"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiJenisKelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validasiNama"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextJenisKelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jenis Kelamin"
+            android:inputType="text"
+            android:textSize="30dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validasiJenisKelamin"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:inputType="text"
+            android:textSize="30dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiNoTelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validasiAlamat"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextNoTlp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No Telepon"
+            android:inputType="text"
+            android:textSize="30dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validasiNoTelp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="text"
+            android:textSize="30dp"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validasiEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorBlack">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="30dp"
+            android:inputType="textPassword"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/validasiKonfirmasiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/validasiPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorBlack">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editTextKonfirmasiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Konfirmasi Password"
+            android:textSize="30dp"
+            android:inputType="textPassword"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack" />
+    </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/shapelogin"
+        android:text="Daftar"
+        android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/loading"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+
+</RelativeLayout>

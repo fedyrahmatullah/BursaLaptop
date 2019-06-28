@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.imor.brs_laptop">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,12 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".Navigation.AboutActivity"
-            android:label="About">
-        </activity>
+            android:label="About" />
         <activity
             android:name=".Navigation.AccountActivity"
             android:label="Account"
@@ -46,9 +48,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity
-            android:name=".Navigation.LogoutActivity">
-        </activity>
+        <activity android:name=".Navigation.LogoutActivity" />
         <activity
             android:name=".PesananJasaService"
             android:label="Pesanan Jasa Service"
@@ -81,8 +81,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".RegisterActivity"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 </manifest>

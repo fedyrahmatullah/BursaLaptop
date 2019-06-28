@@ -6,10 +6,12 @@
     <color name="black">#000</color>
     <color name="white">#FFFFFF</color>
     <color name="signupColor">#066e8a</color>
+    <color name="colorBg2">#dd000000</color>
     <color name="grey">#808080</color>
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#FFF</color>
     <color name="colorGray">#8b8b8b</color>
     <color name="color1">	#f0e4e4</color>
+    <color name="color2">	#dbc0c0</color>
     <color name="merah">#FF2B2A</color>
 </resources>

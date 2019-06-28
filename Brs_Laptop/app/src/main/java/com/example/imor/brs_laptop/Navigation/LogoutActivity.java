@@ -5,42 +5,56 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.imor.brs_laptop.R;
+import com.example.imor.brs_laptop.SessionManager;
+
+import java.util.HashMap;
 
 public class LogoutActivity extends AppCompatActivity {
+
+    SessionManager sessionManager;
+    TextView keluar;
+    TextView txtUser1, txtUser2, txtUser3;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logout);
 
+        sessionManager = new SessionManager(this);
+        sessionManager.checkLogin();
+
+        keluar = findViewById(R.id.logout);
+
+        txtUser1 = findViewById(R.id.txtUser1);
+        txtUser2 = findViewById(R.id.txtUser2);
+        txtUser3 = findViewById(R.id.txtUser3);
+
+        // memanggil method getUserDetail untuk mengecek data user yg login
+        HashMap<String, String> user = sessionManager.getUserDetail();
+
+        // inisialisasi variabel dengan atribut data user yg login
+        String vid_user = user.get(sessionManager.ID_USER);
+        String vnama_user = user.get(sessionManager.NAMA_USER);
+        String vkeyid = user.get(sessionManager.KEY_ID);
+
+        txtUser1.setText("Email : " + vid_user );
+        txtUser2.setText("Username : " + vnama_user);
+        txtUser3.setText("ID USER : " +vkeyid);
+
+        keluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sessionManager.logout();
+            }
+        });
+
+
+
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_pesan) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        finish();
-    }
 }

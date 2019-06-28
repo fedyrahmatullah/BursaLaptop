@@ -1,16 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:elevation="4dp"
     tools:context=".Navigation.LogoutActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Halaman Logout"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:textSize="30dp"/>
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="  BURSA LAPTOP"
+            android:textColor="@color/colorWhite"
+            android:textColorHighlight="@color/black"
+            android:background="@drawable/header1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/txtUser1"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"
+            android:text=""
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtUser2"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"
+            android:text=""
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtUser3"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"
+            android:text=""
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="125dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="125dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/shapeemail"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="LOGOUT"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

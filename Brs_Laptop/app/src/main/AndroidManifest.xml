@@ -20,11 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Navigation.AboutActivity"
-            android:label="About" />
+            android:label="About"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".Navigation.AccountActivity"
             android:label="Account"
@@ -49,7 +53,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Navigation.LogoutActivity" />
+        <activity
+            android:name=".Navigation.LogoutActivity"
+            android:label="Logout"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".PesananJasaService"
             android:label="Pesanan Jasa Service"
@@ -82,7 +93,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>

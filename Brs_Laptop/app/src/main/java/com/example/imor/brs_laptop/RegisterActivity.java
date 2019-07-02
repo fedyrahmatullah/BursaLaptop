@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button Register;
 //    private ProgressBar loading;
 
-    private static String URL = "http://192.168.1.7/BursaLaptop/index.php/api/Api_register";
+    private static String URL = "http://192.168.1.7/Api_BursaLaptop/index.php/api/Api_register";
 
     private String username, nama, password, konfirmasi_password, email,
             alamat, no_hp, jenis_kelamin, nik;

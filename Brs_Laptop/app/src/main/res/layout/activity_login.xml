@@ -72,7 +72,7 @@
                 android:drawableLeft="@drawable/ic_person_black_24dp"
                 android:drawablePadding="10dp"
                 android:paddingLeft="20dp"
-                android:hint="Username"
+                android:hint="Email"
                 android:inputType="text"
                 android:textColor="@color/colorBlack"
                 android:textColorHint="@color/colorBlack" />

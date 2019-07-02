@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     String email, password;
 
     // deklarasi variabel alamat host
-    public static String URL = "http://192.168.1.7/BursaLaptop/index.php/api/api_login";
+    public static String URL = "http://192.168.1.17/BursaLaptop/index.php/api/api_login";
 
     SessionManager sessionManager;
 

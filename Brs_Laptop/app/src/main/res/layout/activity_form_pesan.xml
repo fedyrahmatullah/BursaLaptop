@@ -297,6 +297,13 @@
                 android:layout_weight="1"/>
 
     </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnpesan"
+            android:text="Pesan Service"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
 </RelativeLayout>

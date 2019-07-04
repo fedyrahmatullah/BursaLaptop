@@ -23,7 +23,8 @@
             android:orientation="vertical"
             android:layout_below="@+id/tv1"
             tools:ignore="MissingConstraints"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="20dp">
     <LinearLayout
             android:layout_width="match_parent"

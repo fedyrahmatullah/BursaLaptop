@@ -3,13 +3,108 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="#fff"
     android:layout_height="match_parent">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Service Tab"
-        android:textColor="@color/merah"
-        android:textSize="50dp"
-        android:id="@+id/textView"
-        />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentTop="true"
+       android:orientation="vertical"
+       android:layout_alignParentLeft="true">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="10dp"
+       android:scrollbars="vertical">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:orientation="vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginStart="10dp">
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Pesan Jasa Service"
+       android:layout_marginLeft="50dp"
+       android:layout_marginRight="50dp"
+       android:id="@+id/pesanjasa" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:orientation="vertical"
+       android:layout_marginEnd="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginStart="10dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <TextView
+             android:layout_width="30dp"
+             android:layout_height="wrap_content"
+             android:text="1."
+             android:textSize="20dp" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Pelanggan mengisikan kondisi laptop pada formulir pemesanan"
+             android:textSize="20dp"
+             android:textStyle="bold" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <TextView
+             android:layout_width="30dp"
+             android:layout_height="wrap_content"
+             android:text="2."
+             android:textSize="20dp" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Setelah men-submit pemesanan jasa service maka pelanggan diberikan waktu hingga pukul 20.00 wib untuk membawa laptop yang akan di service ke counter Bursa Laptop di Jalan Mastrip "
+             android:textSize="20dp"
+             android:textStyle="bold"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <TextView
+             android:layout_width="30dp"
+             android:layout_height="wrap_content"
+             android:textSize="20dp"
+             android:text="3."/>
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textSize="20dp"
+             android:textStyle="bold"
+             android:text="Setelah memyerahkan laptop yang akan di service ke counter Bursa Laptop maka pelanggan akan mendapatkan update informasi pengerjaan Service yang dapat dilihat melalui Tab notifikasi"/>
+
+      </LinearLayout>
+
+   </LinearLayout>
+      </LinearLayout>
+   </ScrollView>
+   </LinearLayout>
 </RelativeLayout>

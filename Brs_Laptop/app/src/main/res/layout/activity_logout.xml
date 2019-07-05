@@ -5,9 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg"
     android:elevation="4dp"
     tools:context=".Navigation.LogoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,9 +27,16 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:titleTextColor="@android:color/white" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scrollbars="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg"
         android:gravity="center"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
@@ -31,7 +46,6 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:layout_marginTop="80dp"
             android:text="  BURSA LAPTOP"
             android:textColor="@color/colorWhite"
             android:textColorHighlight="@color/black"
@@ -52,7 +66,7 @@
             android:textSize="20dp"
             android:layout_marginBottom="15dp"
             android:text=""
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorBlack" />
 
         <TextView
             android:id="@+id/txtUser2"
@@ -65,7 +79,7 @@
             android:textSize="20dp"
             android:layout_marginBottom="15dp"
             android:text=""
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorBlack" />
 
         <TextView
             android:id="@+id/txtUser3"
@@ -78,18 +92,19 @@
             android:textSize="20dp"
             android:layout_marginBottom="15dp"
             android:text=""
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorBlack" />
 
         <TextView
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="125dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="40dp"
             android:layout_marginTop="0dp"
-            android:layout_marginEnd="125dp"
+            android:layout_marginEnd="100dp"
             android:layout_marginRight="0dp"
-            android:background="@drawable/shapeemail"
+            android:background="@drawable/shapelogin"
             android:fontFamily="sans-serif"
             android:gravity="center"
             android:padding="6dp"
@@ -98,6 +113,8 @@
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold" />
+    </LinearLayout>
+    </ScrollView>
     </LinearLayout>
 
 
